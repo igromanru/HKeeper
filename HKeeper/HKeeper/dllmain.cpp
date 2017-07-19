@@ -6,13 +6,12 @@
 
 using namespace std;
 
-HANDLE pubgHandle = NULL;
-
 static HANDLE(WINAPI* pOpenProcess)
 (DWORD dwDesiredAccess, BOOL bInheritHandle, DWORD dwProcessId) = OpenProcess;
 
 DWORD GetProcID(char* procName);
 
+HANDLE pubgHandle = NULL;
 char* processName = "TslGame.exe";
 
 HANDLE WINAPI hOpenProcess(DWORD dwDesiredAccess, BOOL bInheritHandle, DWORD dwProcessId)
